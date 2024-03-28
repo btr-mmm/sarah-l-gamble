@@ -11,6 +11,7 @@
     <?php get_the_title() ?> | <?php bloginfo('name') ?>
     <?php endif; ?>
   </title>
+  <?php wp_head() ?>
 </head>
 <body>
   <header>
@@ -24,3 +25,4 @@
       </ul>
     </nav>
   </header>
+  <main>
