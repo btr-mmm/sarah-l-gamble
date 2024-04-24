@@ -1,5 +1,4 @@
-<?php get_header(); ?>
-<?php
+<?php get_header('', array('pageId' => 'home'));
 while (have_posts()):
   the_post();
 
@@ -9,10 +8,12 @@ while (have_posts()):
     <section class="hero">
       <img src="" alt="">
       <div class="hero__content">
-        <p>
-          <?php echo esc_attr($hero['copy']) ?>
-        </p>
-        <?php if ($hero['button_url']): ?>
+        <?php if ($hero['copy']): ?>
+          <p>
+            <?php echo esc_attr($hero['copy']) ?>
+          </p>
+        <?php endif;
+        if ($hero['button_url']): ?>
           <a href="<?php echo esc_url($hero['button_url']) ?>" class="btn btn-primary">
             <?php echo esc_attr($hero['button_label']) ?>
           </a>
@@ -50,9 +51,7 @@ while (have_posts()):
       </div>
       <img src="" alt="">
     </section>
-
     <?php
   endif;
 endwhile;
-
 get_footer(); ?>
