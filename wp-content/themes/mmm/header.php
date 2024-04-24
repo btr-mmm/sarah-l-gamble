@@ -53,4 +53,4 @@
       </ul>
     </nav>
   </header>
-  <main id="<?php echo esc_attr($args['pageId']) ?>">
+  <main id="<?php echo isset($args['pageid']) ? esc_attr($args['pageId']) : '' ?>">
