@@ -5,6 +5,7 @@ add_action('wp_enqueue_scripts', 'slgEnqueueFiles');
 function slgEnqueueFiles()
 {
   wp_enqueue_style('futura-fonts', 'https://use.typekit.net/hei8erc.css');
+  wp_enqueue_style('slg-main', get_template_directory_uri() . '/css/main.css');
 
   // Register Swiper only on scholarships page
   if (is_page('scholarships')) {

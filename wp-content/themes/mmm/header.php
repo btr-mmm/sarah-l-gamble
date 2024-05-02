@@ -17,40 +17,42 @@
 
 <body>
   <header>
-    <h1>Logo</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="<?php echo site_url() ?>">
-            Our Story
-          </a>
-        </li>
-        <li>
-          <a href="<?php echo site_url('/scholarships') ?>">
-            Scholarships
-          </a>
-        </li>
-        <li>
-          <a href="<?php echo site_url('/housing') ?>">
-            Housing
-          </a>
-        </li>
-        <li>
-          <a href="<?php echo site_url('/apply'); ?>">
-            Apply
-          </a>
-        </li>
-        <li>
-          <a href="<?php echo site_url('/contact') ?>">
-            Contact
-          </a>
-        </li>
-        <li>
-          <a class="btn btn-primary btn-white" href="<?php echo site_url('/donate') ?>">
-            Donate
-          </a>
-        </li>
-      </ul>
+    <div class="container">
+      <h1>Logo</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="<?php echo site_url() ?>">
+              Our Story
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo site_url('/scholarships') ?>">
+              Scholarships
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo site_url('/housing') ?>">
+              Housing
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo site_url('/apply'); ?>">
+              Apply
+            </a>
+          </li>
+          <li>
+            <a href="<?php echo site_url('/contact') ?>">
+              Contact
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-primary btn-white" href="<?php echo site_url('/donate') ?>">
+              Donate
+            </a>
+          </li>
+        </ul>
+    </div>
     </nav>
   </header>
   <main id="<?php echo isset($args['pageid']) ? esc_attr($args['pageId']) : '' ?>">
