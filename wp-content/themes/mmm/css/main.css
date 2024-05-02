@@ -15,6 +15,11 @@ html {
   font-size: 16px;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
@@ -36,6 +41,7 @@ h1 {
 
 h2 {
   font-size: 4rem;
+  text-transform: uppercase;
 }
 
 header {
@@ -112,7 +118,19 @@ header nav > ul a:not(.btn) {
 }
 
 .btn-outline {
-  background: none;
+  box-sizing: border-box;
+  border: 0.25rem solid var(--clr-white);
+  padding: calc(0.3em - 0.25rem) calc(1.3em - 0.25rem);
+}
+
+.btn-outline:hover {
+  border-color: var(--clr-white-hover);
+  color: var(--clr-white-hover);
+}
+
+.btn-outline:active {
+  border-color: var(--clr-white-active);
+  color: var(--clr-white-active);
 }
 
 .sr-only {
