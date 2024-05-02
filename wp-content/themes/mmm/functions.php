@@ -14,14 +14,14 @@ function slgEnqueueFiles()
 }
 
 // Enqueue hero CSS when template part is called
-add_action('get_template_part_hero', 'slgEnqueueHeroCSS');
+add_action('get_template_part_template-parts/hero', 'slgEnqueueHeroCSS');
 function slgEnqueueHeroCSS()
 {
   wp_enqueue_style('slg-hero', get_template_directory_uri() . '/css/hero.css');
 }
 
 // Enqueue CTA CSS when template part is called
-add_action('get_template_part_call-to-action', 'slgEnqueueCtaCSS');
+add_action('get_template_part_template-parts/call-to-action', 'slgEnqueueCtaCSS');
 function slgEnqueueCtaCSS()
 {
   wp_enqueue_style('slg-call-to-action', get_template_directory_uri() . '/css/call-to-action.css');
