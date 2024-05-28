@@ -64,7 +64,7 @@
       </div>
     </div>
     <script>
-      const responsiveNav = new ResponsiveNav();
+      const responsiveNav = new ResponsiveNav({ breakpoint: 1200 });
     </script>
   </header>
   <main id="<?php echo isset($args['pageid']) ? esc_attr($args['pageId']) : '' ?>">

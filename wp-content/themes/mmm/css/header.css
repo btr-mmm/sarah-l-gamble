@@ -1,3 +1,9 @@
+:root {
+  --nav-transition-duration: 300ms;
+  --nav-bg-color: var(--clr-primary);
+  --fade-bg-color: rgba(0, 0, 0, 0.5);
+}
+
 header {
   padding: 0.5rem 1rem;
   background-color: var(--clr-primary);
@@ -10,7 +16,7 @@ header .container {
   align-items: center;
 }
 
-header nav > ul {
+nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -20,8 +26,74 @@ header nav > ul {
   gap: 1.5rem;
 }
 
+.nav-container button.nav-toggle {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--clr-white);
+}
+
+.nav-container button.nav-toggle:hover {
+  color: var(--clr-white-hover);
+}
+
+.nav-container button.nav-toggle:active {
+  color: var(--clr-white-active);
+}
+
+/* Mobile nav */
+nav.nav-mobile {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 300px;
+  background-color: var(--nav-bg-color);
+  padding: 1rem 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform var(--nav-transition-duration) ease;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav.nav-mobile.displayed {
+  transform: translateX(0);
+}
+
+nav.nav-mobile ul {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav.nav-mobile button.nav-toggle {
+  align-self: flex-end;
+}
+
 header nav > ul a:not(.btn) {
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
+}
+
+.nav-fade-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--fade-bg-color);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--nav-transition-duration) ease;
+  z-index: 9999;
+}
+
+.nav-fade-bg.displayed {
+  opacity: 1;
+  pointer-events: all;
 }
