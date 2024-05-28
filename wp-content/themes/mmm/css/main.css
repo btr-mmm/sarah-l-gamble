@@ -18,6 +18,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow-x: hidden;
 }
 
 h1,
@@ -44,37 +46,9 @@ h2 {
   text-transform: uppercase;
 }
 
-header {
-  padding: 0.5rem 1rem;
-  background-color: var(--clr-primary);
-  color: white;
-}
-
 .container {
   max-width: 1600px;
   margin: 0 auto;
-}
-
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header nav > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-header nav > ul a:not(.btn) {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
 }
 
 .btn {
