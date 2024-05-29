@@ -2,9 +2,7 @@
 while (have_posts()):
   the_post();
 
-  if (get_field('hero')) {
-    get_template_part('template-parts/hero', '');
-  }
+  get_template_part('template-parts/hero', '');
 
   $bio = get_field('bio');
   if ($bio):
@@ -19,9 +17,7 @@ while (have_posts()):
     <?php
   endif;
 
+  get_template_part('template-parts/call-to-action');
 
-  if (get_field('call_to_action')) {
-    get_template_part('template-parts/call-to-action');
-  }
 endwhile;
 get_footer(); ?>
