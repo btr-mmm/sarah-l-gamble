@@ -8,10 +8,15 @@ while (have_posts()):
   if ($bio):
     ?>
     <section class="bio">
-      <img src="" alt="">
-      <div class="bio__content">
-        <h1><?php echo esc_attr($bio['title']) ?></h1>
-        <p><?php echo esc_attr($bio['copy']) ?></p>
+      <div class="container">
+        <?php if (isset($bio['photo'])): ?>
+          <img src="<?php echo esc_url($bio['photo']['link']) ?>" alt="<?php if (isset($bio['alt']))
+               echo esc_attr($bio['alt']) ?>">
+        <?php endif; ?>
+        <div class="bio__content">
+          <h1><?php echo esc_attr($bio['title']) ?></h1>
+          <p><?php echo esc_attr($bio['copy']) ?></p>
+        </div>
       </div>
     </section>
     <?php

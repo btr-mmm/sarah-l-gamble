@@ -57,6 +57,27 @@ h2 {
   margin: 0 auto;
 }
 
+.bio {
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+}
+
+.bio .container {
+  --grid-cols: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio img {
+  max-width: 500px;
+}
+
+.bio .bio__content {
+  max-width: 1000px;
+}
+
 .btn {
   display: block;
   max-width: -moz-fit-content;
@@ -127,4 +148,11 @@ h2 {
 
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .bio .container {
+    flex-direction: row;
+    gap: 4rem;
+  }
 }
