@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.hero img {
+  width: 100%;
+}
+
 .hero__content-container {
   position: absolute;
   width: 100%;
