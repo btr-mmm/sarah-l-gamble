@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
-    <?php if (is_front_page()): ?>
-      <?php bloginfo('name') ?>
-      <?php echo get_bloginfo('description') == '' ? '' : ' | ' . get_bloginfo('description'); ?>
-    <?php else: ?>
-      <?php get_the_title() ?> | <?php bloginfo('name') ?>
-    <?php endif; ?>
+    <?php
+    wp_title('|', true, 'right');
+    bloginfo('title');
+    if (is_front_page() && get_bloginfo('description') != '')
+      echo ' | ' . get_bloginfo('description');
+    ?>
   </title>
   <?php wp_head() ?>
 </head>
