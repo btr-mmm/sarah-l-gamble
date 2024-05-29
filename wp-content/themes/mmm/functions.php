@@ -21,6 +21,7 @@ add_action('after_setup_theme', 'slgThemeSupport');
 function slgThemeSupport()
 {
   add_image_size('hero', 1920, 712, true);
+  add_image_size('cta', 960, 640, true);
 }
 
 // Enqueue hero CSS when template part is called
