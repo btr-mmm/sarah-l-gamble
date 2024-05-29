@@ -3,20 +3,21 @@
   background-color: var(--clr-primary);
   color: var(--clr-white);
   display: grid;
-  grid-template-columns: repeat(--grid-cols, 1fr);
+  place-items: center;
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
 .call-to-action > img {
-  display: block;
   width: 100%;
 }
 
 .call-to-action__content {
   display: flex;
   flex-direction: column;
+  padding: 2rem 4rem;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .call-to-action {
     --grid-cols: 2;
   }
