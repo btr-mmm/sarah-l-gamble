@@ -14,7 +14,7 @@ while (have_posts()):
                echo esc_attr($bio['alt']) ?>">
         <?php endif; ?>
         <div class="bio__content">
-          <h1><?php echo esc_attr($bio['title']) ?></h1>
+          <h2><?php echo esc_attr($bio['title']) ?></h2>
           <p><?php echo esc_attr($bio['copy']) ?></p>
         </div>
       </div>
