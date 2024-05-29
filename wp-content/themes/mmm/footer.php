@@ -1,7 +1,8 @@
 </main>
 <footer>
   <section class="footer__left">
-    <img class="footer__logo" src="" alt="">
+    <img class="footer__logo" src="<?php echo get_template_directory_uri() . '/assets/images/footer-logo.png' ?>"
+      alt="">
     <p>
       Support the <span class="font-bold">Sarah L. Gamble Foundation</span> by shopping at <a
         href="#">smile.amazon.com</a> at no cost to you. Select our organization for donations by Amazon.
