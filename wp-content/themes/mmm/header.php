@@ -41,27 +41,31 @@
                 </a>
               </li>
               <li>
-                <a href="<?php echo site_url('/scholarships') ?>">
-                Scholarships
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('/housing') ?>">
-                Housing
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('/apply'); ?>">
-                Apply
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('/contact') ?>">
-                Contact
-              </a>
-            </li>
-            <li>
-              <a class="btn btn-primary btn-white" href="<?php echo site_url('/donate') ?>">
+                <a href="<?php echo site_url('/scholarships') ?>" class="<?php if (is_page('scholarships'))
+                     echo 'active' ?>">
+                  Scholarships
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo site_url('/contact') ?>" class="<?php if (is_page('contact'))
+                     echo 'active' ?>">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo site_url('/apply'); ?>" class="<?php if (is_page('apply'))
+                     echo 'active' ?>">
+                  Apply
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo site_url('/housing') ?>" class="<?php if (is_page('housing'))
+                     echo 'active' ?>">
+                  Housing
+                </a>
+              </li>
+              <li>
+                <a class="btn btn-primary btn-white" href="<?php echo site_url('/donate') ?>">
                 Donate
               </a>
             </li>
