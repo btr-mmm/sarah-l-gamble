@@ -2,7 +2,7 @@
 while (have_posts()):
   the_post();
 
-  get_template_part('template-parts/hero', '');
+  get_template_part('template-parts/hero', 'homepage');
 
   $bio = get_field('bio');
   if ($bio):

@@ -11,9 +11,8 @@
       <?php endif; ?>
     </div>
     <?php if (isset($cta['image'])): ?>
-      <img src="<? echo esc_url($cta['image']['sizes']['cta']); ?>"
-        alt="<?php if (isset($cta['image']['alt']))
-          echo esc_attr($cta['image']['alt']); ?>">
+      <img src="<? echo esc_url($cta['image']['sizes']['cta']); ?>" alt="<?php if (isset($cta['image']['alt']))
+           echo esc_attr($cta['image']['alt']); ?>">
     <?php endif; ?>
   </section>
 <?php endif; ?>
