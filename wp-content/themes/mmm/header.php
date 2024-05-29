@@ -20,7 +20,10 @@
 <body>
   <header>
     <div class="container">
-      <h1>Logo</h1>
+      <a href="<?php echo site_url() ?>">
+        <img class="logo" src="<?php echo get_template_directory_uri() . '/assets/images/header-logo.png' ?>"
+          alt="The Sarah L. Gamble Foundation">
+      </a>
       <div class="nav-container">
         <button class="nav-toggle nav-open">
           <i class="fa-solid fa-bars"></i>
@@ -32,12 +35,13 @@
           </button>
           <ul>
             <li>
-              <a href="<?php echo site_url() ?>">
-                Our Story
-              </a>
-            </li>
-            <li>
-              <a href="<?php echo site_url('/scholarships') ?>">
+              <a href="<?php echo site_url() ?>" class="<?php if (is_front_page())
+                   echo 'active' ?>">
+                  Our Story
+                </a>
+              </li>
+              <li>
+                <a href="<?php echo site_url('/scholarships') ?>">
                 Scholarships
               </a>
             </li>
