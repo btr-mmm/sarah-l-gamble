@@ -17,6 +17,12 @@ function slgEnqueueFiles()
   }
 }
 
+add_action('after_setup_theme', 'slgThemeSupport');
+function slgThemeSupport()
+{
+  add_image_size('hero', 1920, 712, true);
+}
+
 // Enqueue hero CSS when template part is called
 add_action('get_template_part_template-parts/hero', 'slgEnqueueHeroCSS');
 function slgEnqueueHeroCSS()
