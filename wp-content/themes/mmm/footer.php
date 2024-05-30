@@ -11,7 +11,7 @@
     </section>
     <section class="footer__contact">
       <h2>Contact Us</h2>
-      <?php echo do_shortcode('[gravityform id="1" title="false"]') ?>
+      <?php echo do_shortcode('[gravityform id="1" title="false" description="false"]') ?>
     </section>
   </div>
 </footer>
