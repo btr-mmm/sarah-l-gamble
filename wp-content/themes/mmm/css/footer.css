@@ -15,13 +15,31 @@ footer h2 {
   color: inherit;
 }
 
+.footer__contact {
+  width: 100%;
+}
+
 .footer__left {
+  padding: 1rem;
   font-size: 1.5rem;
+  max-width: 500px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem 2rem;
+}
+
+#gform_1 label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 @media all and (min-width: 900px) {
