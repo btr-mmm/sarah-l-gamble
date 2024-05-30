@@ -33,16 +33,16 @@
   margin-top: 0;
 }
 
-.call-to-action:nth-of-type(odd) {
+.call-to-action.donate-cta {
   background-color: var(--clr-white);
   color: var(--clr-black);
 }
 
-.call-to-action:nth-of-type(odd) img {
+.call-to-action.donate-cta img {
   order: 2;
 }
 
-.call-to-action:nth-of-type(odd) .call-to-action__content {
+.call-to-action.donate-cta .call-to-action__content {
   order: 1;
 }
 
@@ -51,11 +51,11 @@
     --grid-cols: 2;
   }
 
-  .call-to-action:nth-of-type(odd) img {
+  .call-to-action.donate-cta img {
     order: 1;
   }
 
-  .call-to-action:nth-of-type(odd) .call-to-action__content {
+  .call-to-action.donate-cta .call-to-action__content {
     order: 2;
   }
 }
