@@ -1,5 +1,15 @@
-<?php get_header() ?>
+<?php get_header();
 
-<h1>Hello world!</h1>
+while (have_posts()):
+  the_post();
+  ?>
 
-<?php get_footer() ?>
+  <section>
+    <div class="container">
+      <h1><?php the_title() ?></h1>
+      <?php the_content(); ?>
+    </div>
+  </section>
+
+<?php endwhile;
+get_footer() ?>
