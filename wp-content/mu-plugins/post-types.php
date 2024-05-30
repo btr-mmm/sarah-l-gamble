@@ -26,14 +26,16 @@ function slgRegisterPostTypes()
         'all_items' => __('All Recipients', 'example-textdomain'),
       ),
       'supports' => array('title'),
+      'menu_icon' => 'dashicons-awards'
     )
   );
 }
 
 add_filter('enter_title_here', 'slgChangeTitleText');
 function
-  slgChangeTitleText($title)
-{
+  slgChangeTitleText(
+  $title
+) {
   $screen = get_current_screen();
 
   if ($screen->post_type == 'recipient') {
