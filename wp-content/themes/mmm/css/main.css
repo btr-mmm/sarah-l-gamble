@@ -58,6 +58,10 @@ h3 {
   text-transform: uppercase;
 }
 
+section {
+  font-size: 1.5rem;
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
