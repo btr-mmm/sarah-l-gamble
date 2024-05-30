@@ -19,8 +19,38 @@
   max-width: 900px;
 }
 
+.call-to-action__content h2 {
+  color: inherit;
+}
+
+.call-to-action img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.call-to-action.donate-cta {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+}
+
+.call-to-action.donate-cta img {
+  order: 2;
+}
+
+.call-to-action.donate-cta .call-to-action__content {
+  order: 1;
+}
+
 @media screen and (min-width: 1200px) {
   .call-to-action {
     --grid-cols: 2;
+  }
+
+  .call-to-action.donate-cta img {
+    order: 1;
+  }
+
+  .call-to-action.donate-cta .call-to-action__content {
+    order: 2;
   }
 }

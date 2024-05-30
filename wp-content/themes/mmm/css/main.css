@@ -10,7 +10,7 @@
 }
 
 html {
-  font-family: "futura-pt", sans-serif;
+  font-family: 'futura-pt', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -35,7 +35,7 @@ h4,
 h5,
 h6,
 .btn {
-  font-family: "futura-pt", sans-serif;
+  font-family: 'futura-pt', sans-serif;
   font-weight: 700;
   font-style: normal;
   padding: 0;
@@ -50,6 +50,7 @@ h1 {
 h2 {
   font-size: 4rem;
   text-transform: uppercase;
+  color: var(--clr-primary);
 }
 
 .container {

@@ -64,7 +64,7 @@ while (have_posts()):
         <p><?php echo esc_attr($cta['body']) ?></p>
         <?php if ($cta['button']): ?>
           <a href="<?php echo esc_url($cta['button']['link']) ?>"
-            class="btn btn-outline"><?php echo esc_attr($cta['button']['label']) ?>
+            class="btn btn-primary"><?php echo esc_attr($cta['button']['label']) ?>
           </a>
         <?php endif; ?>
       </div>
