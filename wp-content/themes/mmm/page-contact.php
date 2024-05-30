@@ -1,5 +1,12 @@
-<?php get_header(); ?>
+<?php get_header();
 
-<h1>Hello world!</h1>
+while (have_posts()):
+  the_post();
 
-<?php get_footer(); ?>
+  get_template_part("template-parts/hero", '');
+  ?>
+
+
+
+<?php endwhile;
+get_footer(); ?>
