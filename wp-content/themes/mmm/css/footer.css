@@ -11,6 +11,10 @@ footer .container {
   place-items: center start;
 }
 
+footer h2 {
+  color: inherit;
+}
+
 .footer__left {
   font-size: 1.5rem;
   text-align: center;
