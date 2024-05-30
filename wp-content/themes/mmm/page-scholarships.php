@@ -25,8 +25,23 @@ while (have_posts()):
   if ($cta): ?>
     <section class="call-to-action">
       <div class="call-to-action__content">
-        <h2><?php echo esc_attr($cta['heading']) ?></h2>
-        <p><?php echo $cta['body'] ?></p>
+        <h2>
+          <?php echo esc_attr($cta['heading']) ?>
+        </h2>
+        <p>
+          The recipients will demonstrate a financial need and the following criteria: Faith and/or Community involvement.
+        </p>
+        <h3>
+          Steps To Complete
+        </h3>
+        <p>
+          To be considered for one of these scholarships you must:
+        </p>
+        <ol>
+          <?php foreach ($cta['steps'] as $step): ?>
+            <li><?php echo $step['step'] ?></li>
+          <?php endforeach; ?>
+        </ol>
         <?php if ($cta['button']): ?>
           <a href="<?php echo esc_url($cta['button']['link']) ?>"
             class="btn btn-outline"><?php echo esc_attr($cta['button']['label']) ?>
