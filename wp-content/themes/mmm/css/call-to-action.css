@@ -28,16 +28,21 @@
   object-fit: cover;
 }
 
-.call-to-action.donate-cta {
+.call-to-action ol,
+.call-to-action ul {
+  margin-top: 0;
+}
+
+.call-to-action:nth-of-type(odd) {
   background-color: var(--clr-white);
   color: var(--clr-black);
 }
 
-.call-to-action.donate-cta img {
+.call-to-action:nth-of-type(odd) img {
   order: 2;
 }
 
-.call-to-action.donate-cta .call-to-action__content {
+.call-to-action:nth-of-type(odd) .call-to-action__content {
   order: 1;
 }
 
@@ -46,11 +51,11 @@
     --grid-cols: 2;
   }
 
-  .call-to-action.donate-cta img {
+  .call-to-action:nth-of-type(odd) img {
     order: 1;
   }
 
-  .call-to-action.donate-cta .call-to-action__content {
+  .call-to-action:nth-of-type(odd) .call-to-action__content {
     order: 2;
   }
 }
