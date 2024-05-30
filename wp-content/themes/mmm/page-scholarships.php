@@ -37,11 +37,13 @@ while (have_posts()):
         <p>
           To be considered for one of these scholarships you must:
         </p>
-        <ol>
-          <?php foreach ($cta['steps'] as $step): ?>
-            <li><?php echo $step['step'] ?></li>
-          <?php endforeach; ?>
-        </ol>
+        <?php if (isset($cta['steps'])): ?>
+          <ol>
+            <?php foreach ($cta['steps'] as $step): ?>
+              <li><?php echo $step['step'] ?></li>
+            <?php endforeach; ?>
+          </ol>
+        <?php endif; ?>
         <?php if ($cta['button']): ?>
           <a href="<?php echo esc_url($cta['button']['link']) ?>"
             class="btn btn-outline"><?php echo esc_attr($cta['button']['label']) ?>
@@ -53,6 +55,24 @@ while (have_posts()):
              echo esc_attr($cta['image']['alt']); ?>">
       <?php endif; ?>
     </section>
-  <?php endif; ?>
-<?php endwhile;
+  <?php endif;
+  $cta = get_field('donate_cta');
+  if ($cta): ?>
+    <section class="call-to-action donate-cta">
+      <div class="call-to-action__content">
+        <h2><?php echo esc_attr($cta['heading']) ?></h2>
+        <p><?php echo esc_attr($cta['body']) ?></p>
+        <?php if ($cta['button']): ?>
+          <a href="<?php echo esc_url($cta['button']['link']) ?>"
+            class="btn btn-outline"><?php echo esc_attr($cta['button']['label']) ?>
+          </a>
+        <?php endif; ?>
+      </div>
+      <?php if (isset($cta['image'])): ?>
+        <img src="<? echo esc_url($cta['image']['sizes']['cta']); ?>" alt="<?php if (isset($cta['image']['alt']))
+             echo esc_attr($cta['image']['alt']); ?>">
+      <?php endif; ?>
+    </section>
+  <?php endif;
+endwhile;
 get_footer(); ?>
