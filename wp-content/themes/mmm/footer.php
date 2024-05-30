@@ -11,20 +11,7 @@
     </section>
     <section class="footer__contact">
       <h2>Contact Us</h2>
-      <form action="">
-        <div>
-          <label for="name" class="sr-only">Name</label>
-          <input type="text" name="name" id="name" placeholder="Name">
-        </div>
-        <div>
-          <label for="email" class="sr-only">Email Address</label>
-          <input type="text" name="email" id="email" placeholder="Email">
-        </div>
-        <div>
-          <label for="message" class="sr-only">Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-        </div>
-      </form>
+      <?php echo do_shortcode('[gravityform id="1" title="false"]') ?>
     </section>
   </div>
 </footer>
