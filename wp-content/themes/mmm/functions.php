@@ -9,6 +9,7 @@ function slgEnqueueFiles()
   wp_enqueue_style('slg-header', get_template_directory_uri() . '/css/header.css', ['slg-main'], rand(111, 9999));
   wp_enqueue_style('slg-footer', get_template_directory_uri() . '/css/footer.css', ['slg-main'], rand(111, 9999));
   wp_enqueue_style('slg-hero', get_template_directory_uri() . '/css/hero.css', ['slg-main'], rand(111, 9999));
+  wp_enqueue_style('slg-contact-page', get_template_directory_uri() . '/css/contact-page.css', ['slg-main'], rand(111, 9999));
   wp_enqueue_style('slg-call-to-action', get_template_directory_uri() . '/css/call-to-action.css', ['slg-main'], rand(111, 9999));
 
   wp_enqueue_script('slg-responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js');

@@ -1,6 +1,8 @@
 :root {
   --clr-primary: #8956a3;
   --clr-dark: #462158;
+  --clr-dark-hover: #612a7e;
+  --clr-dark-active: #74319a;
   --clr-secondary: #ed2f32;
   --clr-secondary-hover: #dc2629;
   --clr-secondary-active: #b91c1e;
@@ -62,6 +64,20 @@ section {
   font-size: 1.5rem;
 }
 
+main a {
+  color: var(--clr-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: var(--clr-dark-hover);
+}
+
+main a:active {
+  color: var(--clr-dark-active);
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
@@ -104,14 +120,17 @@ section {
 }
 
 .btn-primary {
+  color: var(--clr-white);
   background-color: var(--clr-secondary);
 }
 
 .btn-primary:hover {
+  color: var(--clr-white-hover);
   background-color: var(--clr-secondary-hover);
 }
 
 .btn-primary:active {
+  color: var(--clr-white-active);
   background-color: var(--clr-secondary-active);
 }
 
@@ -158,6 +177,10 @@ section {
 
 .hidden {
   display: none;
+}
+
+.text-bold {
+  font-weight: 700;
 }
 
 @media screen and (min-width: 1200px) {
