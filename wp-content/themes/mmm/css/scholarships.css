@@ -20,6 +20,10 @@ section.recipients .container {
   background: var(--clr-primary);
 }
 
+.slide-content .school {
+  font-weight: 600;
+}
+
 @media screen and (min-width: 1200px) {
   section.recipients .container {
     flex-direction: row;
