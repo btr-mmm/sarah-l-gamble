@@ -38,8 +38,12 @@ while (have_posts()):
                 <?php endif ?>
                 <div class="slide-content">
                   <h3><?php the_title(); ?></h3>
-                  <p></p>
-                  <?php if (get_field('bio')): ?>
+                  <?php if (get_field('school')): ?>
+                    <p class="school">
+                      <?php echo esc_attr(get_field('school')) ?>
+                    </p>
+                  <?php endif;
+                  if (get_field('bio')): ?>
                     <p>
                       <?php echo esc_attr(get_field('bio')) ?>
                     </p>
