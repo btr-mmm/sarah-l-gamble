@@ -32,7 +32,19 @@ while (have_posts()):
             <?php while ($recipientsQuery->have_posts()):
               $recipientsQuery->the_post(); ?>
               <div class="swiper-slide">
-                <?php the_title(); ?>
+                <?php if (get_field('photo')):
+                  $photo = get_field('photo') ?>
+                  <img src="<?php echo esc_url($photo['sizes']['recipients-slider']) ?>" alt="<?php the_title() ?>">
+                <?php endif ?>
+                <div class="slide-content">
+                  <h3><?php the_title(); ?></h3>
+                  <p></p>
+                  <?php if (get_field('bio')): ?>
+                    <p>
+                      <?php echo esc_attr(get_field('bio')) ?>
+                    </p>
+                  <?php endif; ?>
+                </div>
               </div>
             <?php endwhile;
             wp_reset_postdata(); ?>

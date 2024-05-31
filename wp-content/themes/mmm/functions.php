@@ -26,4 +26,5 @@ function slgThemeSupport()
 {
   add_image_size('hero', 1920, 712, true);
   add_image_size('cta', 960, 640, true);
+  add_image_size('recipients-slider', 500, 700, true);
 }
