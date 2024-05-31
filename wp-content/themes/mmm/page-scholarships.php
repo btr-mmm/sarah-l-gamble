@@ -19,7 +19,45 @@ while (have_posts()):
           </p>
         <?php endif; ?>
       </div>
+      <?php $recipientsQuery = new WP_Query(
+        array(
+          'post_type' => 'recipient',
+          'posts_per_page' => '-1',
+        )
+      );
+      if ($recipientsQuery->have_posts()):
+        ?>
+        <div class="swiper recipients-slider">
+          <div class="swiper-wrapper">
+            <?php while ($recipientsQuery->have_posts()):
+              $recipientsQuery->the_post(); ?>
+              <div class="swiper-slide">
+                <?php the_title(); ?>
+              </div>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+          </div>
+          <div class="swiper-pagination"></div>
+          <button class="swiper-button-prev"></button><button class="swiper-button-next"></button>
+        </div>
+        <script>
+          const recipientsSlider = new Swiper(
+            '.swiper.recipients-slider',
+            {
+              loop: true,
+              navigation: {
+                nextEl: '.recipients-slider .swiper-button-next',
+                prevEl: '.recipients-slider .swiper-button-prev',
+              },
+              pagination: {
+                el: '.recipients-slider .swiper-pagination'
+              }
+            }
+          )
+        </script>
+      <?php endif; ?>
     </section>
+
   <?php endif;
   $cta = get_field('apply_cta');
   if ($cta): ?>
