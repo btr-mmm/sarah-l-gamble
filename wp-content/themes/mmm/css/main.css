@@ -182,6 +182,7 @@ main a:active {
 }
 
 .gform_wrapper .gform_button {
+  cursor: pointer;
   margin-left: auto;
   background-color: var(--clr-secondary);
   display: block;
@@ -199,6 +200,14 @@ main a:active {
   border: none;
   transition: background-color 200ms ease, color 200ms ease,
     border-color 200ms ease;
+}
+
+.gform_wrapper .gform_button:hover {
+  background-color: var(--clr-secondary-hover);
+}
+
+.gform_wrapper .gform_button:active {
+  background-color: var(--clr-secondary-active);
 }
 
 .sr-only {
