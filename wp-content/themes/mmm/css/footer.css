@@ -28,6 +28,7 @@ footer h2 {
   flex-direction: column;
   align-items: center;
   padding: 1rem 2rem;
+  place-self: center;
 }
 
 #gform_1 label {
