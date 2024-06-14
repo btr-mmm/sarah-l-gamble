@@ -1,0 +1,23 @@
+section.donation-form {
+  padding: 2rem;
+}
+
+section.donation-form .container {
+  max-width: 900px;
+}
+
+section.donation-form h1 {
+  font-size: 2.5rem;
+}
+
+section.donation-form h1,
+section.donation-form p {
+  text-align: center;
+}
+
+section.donation-form hr {
+  height: 0.35rem;
+  max-width: 800px;
+  background-color: var(--clr-secondary);
+  border: none;
+}
