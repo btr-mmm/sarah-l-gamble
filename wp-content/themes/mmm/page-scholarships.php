@@ -24,6 +24,7 @@ while (have_posts()):
           array(
             'post_type' => 'recipient',
             'posts_per_page' => '-1',
+            'order' => 'asc'
           )
         );
         if ($recipientsQuery->have_posts()):
@@ -68,7 +69,11 @@ while (have_posts()):
                 },
                 pagination: {
                   el: '.recipients-slider .swiper-pagination'
-                }
+                },
+                autoplay: {
+                  delay: 5000,
+                },
+                speed: 500,
               }
             )
           </script>
