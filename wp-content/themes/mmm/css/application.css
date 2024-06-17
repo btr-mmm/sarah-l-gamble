@@ -1,0 +1,46 @@
+section.form-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.form-row {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-row * {
+  box-sizing: border-box;
+}
+
+.form-row h3 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.form-row p {
+  margin: 0;
+  padding: 0;
+}
+
+.form-row span.wpcf7-form-control-wrap {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.form-row input,
+.form-row select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.form-row#name {
+  grid-template-columns: 1fr 1fr 1fr auto;
+  max-width: 100%;
+}
+
+.form-row#contact-info {
+  grid-template-columns: repeat(3, 1fr);
+}
