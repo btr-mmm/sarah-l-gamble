@@ -12,8 +12,6 @@
       echo ' | ' . get_bloginfo('description');
     ?>
   </title>
-  <link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/assets/images/favicon.png' ?>"
-    type="image/x-icon">
   <?php wp_head() ?>
 </head>
 
