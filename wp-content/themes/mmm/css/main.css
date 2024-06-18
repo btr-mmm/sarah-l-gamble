@@ -12,7 +12,7 @@
 }
 
 html {
-  font-family: 'futura-pt', sans-serif;
+  font-family: "futura-pt", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -43,7 +43,7 @@ h4,
 h5,
 h6,
 .btn {
-  font-family: 'futura-pt', sans-serif;
+  font-family: "futura-pt", sans-serif;
   font-weight: 700;
   font-style: normal;
   padding: 0;
@@ -167,6 +167,23 @@ main a:active {
 .btn-outline:active {
   border-color: var(--clr-white-active);
   color: var(--clr-white-active);
+}
+
+.btn-outline.btn-outline-dark {
+  box-sizing: border-box;
+  border: 0.25rem solid var(--clr-secondary);
+  color: var(--clr-secondary);
+  padding: calc(0.3em - 0.25rem) calc(1.3em - 0.25rem);
+}
+
+.btn-outline.btn-outline-dark:hover {
+  border-color: var(--clr-secondary-hover);
+  color: var(--clr-secondary-hover);
+}
+
+.btn-outline.btn-outline-dark:active {
+  border-color: var(--clr-secondary-active);
+  color: var(--clr-secondary-active);
 }
 
 .gform_wrapper ::placeholder,
