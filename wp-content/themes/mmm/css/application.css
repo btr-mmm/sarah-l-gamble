@@ -1,13 +1,58 @@
+/* Apply page */
+
+section.call-to-action.apply-cta {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Application form */
 section.form-section {
+  --form-spacing: 1rem;
   display: flex;
   flex-direction: column;
+  gap: var(--form-spacing);
   max-width: 100%;
+}
+
+section.application-form * {
+  box-sizing: border-box;
+}
+
+section.application-form .cf7mls-btns > button {
+  color: var(--clr-secondary);
+  border: 0.25rem solid var(--clr-secondary);
+  background: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  transition: border-color 300ms ease, color 300ms ease;
+  border-radius: 0.5rem;
+}
+
+section.application-form .cf7mls-btns > button:hover {
+  color: var(--clr-secondary-hover);
+  border-color: var(--clr-secondary-hover);
+  opacity: 1;
+}
+
+section.application-form .cf7mls-btns > button:active {
+  color: var(--clr-secondary-active);
+  border-color: var(--clr-secondary-active);
+  opacity: 1;
 }
 
 .form-row {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+  gap: var(--form-spacing);
 }
 
 .form-row * {
@@ -16,12 +61,8 @@ section.form-section {
 
 .form-row h3 {
   grid-column: 1 / -1;
+  grid-area: heading;
   margin: 0;
-}
-
-.form-row p {
-  margin: 0;
-  padding: 0;
 }
 
 .form-row span.wpcf7-form-control-wrap {
@@ -36,11 +77,148 @@ section.form-section {
   padding: 0.5rem 1rem;
 }
 
-.form-row#name {
+/* Page 1 */
+
+.form-row#personal-details {
   grid-template-columns: 1fr 1fr 1fr auto;
   max-width: 100%;
 }
 
 .form-row#contact-info {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.address-form {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "heading heading heading heading heading heading"
+    "street street street street street street"
+    "city city city state state zip";
+}
+
+.form-row#address .form-control.address-street {
+  grid-area: street;
+}
+
+.form-control.address-city {
+  grid-area: city;
+}
+
+.form-control.address-state {
+  grid-area: state;
+}
+
+.form-control.address-zip {
+  grid-area: zip;
+}
+
+.form-row .guardian-row {
+  display: grid;
+  gap: var(--form-spacing);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "firstname firstname firstname firstname firstname lastname lastname lastname lastname lastname type type"
+    "street street street street street city city city city state zip zip"
+    "button button button button button button button button button button button button";
+}
+
+.form-row .guardian-row .form-control.guardian-first-name {
+  grid-area: firstname;
+}
+
+.form-row .guardian-row .form-control.guardian-last-name {
+  grid-area: lastname;
+}
+
+.form-row .guardian-row .form-control.guardian-type {
+  grid-area: type;
+}
+
+.form-row .guardian-row .form-control.guardian-street-address {
+  grid-area: street;
+}
+
+.form-row .guardian-row .form-control.guardian-city {
+  grid-area: city;
+}
+
+.form-row .guardian-row .form-control.guardian-state {
+  grid-area: state;
+}
+
+.form-row .guardian-row .form-control.guardian-zip {
+  grid-area: zip;
+}
+
+.form-row .guardian-row > :last-child {
+  grid-area: button;
+  place-self: end;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.form-row .guardian-row > :last-child > button {
+  border: 0.125rem solid black;
+  font-weight: 700;
+}
+
+.form-row#guardians .wpcf7-field-groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-spacing);
+}
+
+/* Page 2 */
+
+.form-row#high-school {
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "heading heading heading heading heading heading"
+    "name name name name phone phone"
+    "street street street city state zip"
+    "year year unweighted weighted rank size";
+}
+
+.form-control.school-name {
+  grid-area: name;
+}
+
+.form-control.school-phone {
+  grid-area: phone;
+}
+
+.form-control.school-street-address {
+  grid-area: street;
+}
+
+.form-control.school-city {
+  grid-area: city;
+}
+
+.form-control.school-state {
+  grid-area: state;
+}
+
+.form-control.school-zip {
+  grid-area: zip;
+}
+
+.form-control.school-graduation-year {
+  grid-area: year;
+}
+
+.form-control.school-unweighted-gpa {
+  grid-area: unweighted;
+}
+
+.form-control.school-weighted-gpa {
+  grid-area: weighted;
+}
+
+.form-control.school-rank {
+  grid-area: rank;
+}
+
+.form-control.school-size {
+  grid-area: size;
 }
