@@ -2,12 +2,10 @@
 while (have_posts()):
   the_post();
 
-  if (get_field('hero')) {
-    get_template_part('hero');
-  }
+  get_template_part('template-parts/hero', 'housing');
 
   if (get_field('call_to_action')) {
-    get_template_part('call-to-action');
+    get_template_part('template-parts/call-to-action', 'housing');
   }
 endwhile;
 get_footer();
