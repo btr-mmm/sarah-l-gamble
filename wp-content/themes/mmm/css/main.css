@@ -52,6 +52,7 @@ h6,
 
 h1 {
   font-size: 7rem;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -91,7 +92,6 @@ main a:active {
 
 .bio {
   padding: 2rem 4rem;
-  font-size: 1.5rem;
 }
 
 .bio .container {
@@ -247,9 +247,39 @@ main a:active {
   font-weight: 700;
 }
 
+@media screen and (max-width: 1500px) {
+  .hero.hero-homepage {
+    aspect-ratio: 2.3;
+  }
+
+  section {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .bio .container {
     flex-direction: row;
     gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero-homepage .logo {
+    max-width: 300px;
+  }
+
+  .btn {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header img.logo {
+    max-width: 60vw;
+  }
+
+  .btn {
+    font-size: 1.25rem;
   }
 }
